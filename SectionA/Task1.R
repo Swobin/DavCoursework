@@ -4,7 +4,7 @@
 #Load the libraries needed
 library(tidyverse)
 library(readxl)
-library(ggplot2)
+
 
 #Read the excel sheet
 titles <- read_excel("CrackersDoMatter_DS.xlsx", sheet = "DC_TitlesOverview")

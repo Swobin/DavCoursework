@@ -1,7 +1,10 @@
+#Section A Task 2 Most prolific writers
+#Heatmap plot so you can see which one has done the most in which issues only showing who has done atleast 5.
+
 #Load the necessary libraries.
 library(tidyverse)
 library(readxl)
-library(ggplot2)
+
 
 #Reading the excel sheets
 issues  <- read_excel("CrackersDoMatter_DS.xlsx", sheet = "DC_Issues")
