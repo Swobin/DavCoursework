@@ -71,4 +71,5 @@ p4 <- ggplot(cover_data, aes(x = Title, y = Artist, fill = Issues)) +
     panel.grid.minor = element_blank()
   )
 
+#Making the plot interactive
 ggplotly(p4)
