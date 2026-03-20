@@ -118,5 +118,5 @@ p <- ggplot(writer_title_counts,
     legend.position  = "right"
   )
 
-#print
+#Print the plot
 print(p)
