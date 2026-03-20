@@ -84,4 +84,4 @@ p <- ggplot(heat_data, aes(x = Pub_Year, y = Title_Label, fill = n)) +
     plot.margin      = margin(t = 5, r = 40, b = 5, l = 120)
   )
 
-print(p)
+print(p5)

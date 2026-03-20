@@ -119,4 +119,4 @@ p <- ggplot(writer_title_counts,
   )
 
 #Print the plot
-print(p)
+print(p2)

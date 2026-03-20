@@ -67,5 +67,5 @@ p <- ggplot(top_titles) +
   )
 
 #Print the plot
-print(p)
+print(p1)
   

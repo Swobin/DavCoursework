@@ -95,4 +95,4 @@ p <- ggplot(career_long, aes(x = Pub_Year, y = Count, fill = Writer)) +
   )
 
 #Making the plot interactive
-ggplotly(p)
+ggplotly(p3)
