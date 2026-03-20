@@ -66,6 +66,6 @@ p <- ggplot(top_titles) +
     axis.text.y = element_text(size = 10)
   )
 
-#Save plot
+#Print the plot
 print(p)
   
