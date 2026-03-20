@@ -93,7 +93,7 @@ writer_title_counts <- writer_title_counts %>%
   )
 
 #heatmap plotting
-ggplot(writer_title_counts,
+p <- ggplot(writer_title_counts,
        aes(x = Title_Full, y = Writer_Name, fill = Issues)) +
   geom_tile(colour = "white", linewidth = 0.4) +
   geom_text(
@@ -119,4 +119,4 @@ ggplot(writer_title_counts,
   )
 
 #Save
-ggsave("task2_prolific_writers.png", width = 16, height = 7, dpi = 150)
+print(p)

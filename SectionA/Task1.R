@@ -28,7 +28,7 @@ top_titles <- titles %>%
   mutate(Title_Full = fct_reorder(Title_Full, Total_Issues))
 
 # Plotting
-ggplot(top_titles) +
+p <- ggplot(top_titles) +
   
   geom_segment(
     aes(x = Start_Year, xend = End_Year,
@@ -67,5 +67,5 @@ ggplot(top_titles) +
   )
 
 #Save plot
-ggsave("task1_top20_titles.png", width = 12, height = 7, dpi = 150)
+print(p)
   
