@@ -28,7 +28,7 @@ top_titles <- titles %>%
   mutate(Title_Full = fct_reorder(Title_Full, Total_Issues))
 
 # Plotting
-p <- ggplot(top_titles) +
+p1 <- ggplot(top_titles) +
   
   geom_segment(
     aes(x = Start_Year, xend = End_Year,
@@ -65,7 +65,3 @@ p <- ggplot(top_titles) +
     panel.grid.minor = element_blank(),
     axis.text.y = element_text(size = 10)
   )
-
-#Print the plot
-print(p1)
-  

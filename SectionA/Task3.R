@@ -69,7 +69,7 @@ career_long <- career_full %>%
   )
 
 #Plotting the chart
-p <- ggplot(career_long, aes(x = Pub_Year, y = Count, fill = Writer)) +
+p3 <- ggplot(career_long, aes(x = Pub_Year, y = Count, fill = Writer)) +
   geom_area(alpha = 0.6, position = "identity") +
   facet_wrap(
     ~Metric,

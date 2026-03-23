@@ -60,7 +60,7 @@ heat_data <- heat_data |>
                                         "1st Print",
                                         "Reprint")))
 #Heatmap
-p <- ggplot(heat_data, aes(x = Pub_Year, y = Title_Label, fill = n)) +
+p5 <- ggplot(heat_data, aes(x = Pub_Year, y = Title_Label, fill = n)) +
   geom_tile(colour = "white", linewidth = 0.4) +
   facet_grid(cover_type ~ Artist, scales = "free", space = "free") +
   scale_fill_gradient(low      = "lightblue",
@@ -83,5 +83,3 @@ p <- ggplot(heat_data, aes(x = Pub_Year, y = Title_Label, fill = n)) +
     legend.position  = "bottom",
     plot.margin      = margin(t = 5, r = 40, b = 5, l = 120)
   )
-
-print(p5)

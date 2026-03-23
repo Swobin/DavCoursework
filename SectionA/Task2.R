@@ -117,6 +117,3 @@ p <- ggplot(writer_title_counts,
     panel.grid       = element_blank(),
     legend.position  = "right"
   )
-
-#Print the plot
-print(p2)

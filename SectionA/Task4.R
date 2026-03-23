@@ -3,7 +3,7 @@ library(tidyverse)
 library(readxl)
 library(plotly)
 
-# Loading the data
+#Loading the data
 issues <- read_excel("CrackersDoMatter_DS.xlsx", sheet = "DC_Issues", skip = 1)
 artists <- read_excel("CrackersDoMatter_DS.xlsx", sheet = "Shared_CoverArtist")
 titles <- read_excel("CrackersDoMatter_DS.xlsx", sheet = "DC_TitlesOverview")
