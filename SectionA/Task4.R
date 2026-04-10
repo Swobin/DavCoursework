@@ -47,10 +47,11 @@ top10_artists <- covers_long %>%
 # Summarising by artist and series joining full title names
 cover_data <- covers_long %>%
   filter(Artist_UID %in% top10_artists) %>%
-  group_by(Artist_UID, Issue_UID) %>%
+  mutate(U_SeriesID = str_extract(Issue_UID, "^[A-Z*]+_\\d+")) %>%
+  group_by(Artist_UID, U_SeriesID) %>%
   summarise(Issues = n(), .groups = "drop") %>%
   left_join(artist_names, by = c("Artist_UID" = "UID")) %>%
-  left_join(title_lookup, by = c("Issue_UID" = "U_SeriesID")) %>%
+  left_join(title_lookup, by = "U_SeriesID") %>%
   filter(!is.na(Title_Label)) %>%
   rename(Title = Title_Label) %>%
   mutate(Artist = fct_reorder(Artist, Issues, sum))

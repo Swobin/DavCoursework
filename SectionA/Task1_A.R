@@ -13,7 +13,7 @@ top_titles <- titles %>%
   mutate(
     Last_PubYr = ifelse(Last_PubYr == "Ongoing", 2026, as.numeric(Last_PubYr)),
     Max_Issues = as.numeric(Max_Issues),
-    `#1_pubYr` = as.numeric(`#1_PubYr`)
+    `#1_PubYr` = as.numeric(`#1_PubYr`)  
   ) %>%
   group_by(Title_Full) %>%
   summarise(
@@ -65,3 +65,5 @@ p1 <- ggplot(top_titles) +
     panel.grid.minor = element_blank(),
     axis.text.y = element_text(size = 10)
   )
+
+print(p1)
